@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: decent-infra/shomix-car-action@v1.4
+        uses: decent-infra/shomix-car-action@v1.5
         with:
           spheron-token:  ${{ secrets.SPHERON_TOKEN }}
           cluster-name: "github-action-cluster"
