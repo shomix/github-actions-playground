@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: decent-infra/shomix-car-action@v1.6
+        uses: decent-infra/shomix-car-action@v1.7
         with:
           spheron-token:  ${{ secrets.SPHERON_TOKEN }}
           cluster-name: "github-action-cluster"
@@ -19,6 +19,10 @@ jobs:
           health-check-path: "/"
           health-check-port: 80
           instance-plan-name: "Ventus Nano"
+          ports: "8080:80,3000:3000"
+          environment-variables: "VAR1=value1,VAR2=value2"
+          commands: "exec"
+          args: "12324"
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
