@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: decent-infra/shomix-car-action@v1.8
+        uses: decent-infra/shomix-car-action@v1.9
         with:
           spheron-token:  ${{ secrets.SPHERON_TOKEN }}
           cluster-name: "github-action-cluster"
@@ -17,7 +17,7 @@ jobs:
           image: "vocoront/simple-express-server"
           tag: "v1.0.5"
           health-check-path: "/"
-          health-check-port: 80
+          health-check-port: 3000
           instance-plan-name: "Ventus Nano"
           ports: "8080:80,3000:3000"
           environment-variables: "VAR1=value1,VAR2=value2"
