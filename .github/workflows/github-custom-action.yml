@@ -5,11 +5,11 @@ on: [push]
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: A job of custem action
     steps:
       - name: Hello world action step
         id: hello
-        uses: decent-infra/shomix-car-action@v1.1
+        uses: decent-infra/shomix-car-action@v1.2
         with:
           who-to-greet: 'Shomix The Car'
       # Use the output from the `hello` step
