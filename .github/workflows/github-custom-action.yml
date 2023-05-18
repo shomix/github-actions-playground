@@ -12,6 +12,13 @@ jobs:
         uses: decent-infra/shomix-car-action@v1.3
         with:
           spheron-token:  ${{ secrets.SPHERON_TOKEN }}
+          cluster-name: "github-action-cluster"
+          image-url: "https://hub.docker.com/repository/docker/vocoront/simple-express-server/general"
+          image: "vocoront/simple-express-server"
+          tag: "v1.0.5"
+          health-check-path: "/"
+          health-check-port: 80
+          instance-plan-name: "Ventus Nano"
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
