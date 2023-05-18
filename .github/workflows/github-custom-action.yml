@@ -20,7 +20,7 @@ jobs:
           health-check-port: 3000
           instance-plan-name: "Ventus Nano"
           ports: "8080:80,3000:3000"
-          environment-variables: "VAR1=value1,VAR2=value2"
+          environment-variables: "VAR1=value1,VAR2=value22"
           region: "any"
       # Use the output from the `hello` step
       - name: Get the output time
