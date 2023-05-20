@@ -1,6 +1,9 @@
 name: GitHub Custom Action
 run-name: ${{ github.actor }} is testing out Custom GitHub Actions 🚀
-on: [push]
+on:
+  push:
+    branches:
+      - create-instance
 
 jobs:
   hello_world_job:
