@@ -1,0 +1,20 @@
+name: Update Instance
+run-name: Updating the cluster instance
+on: [push]
+
+jobs:
+  update-instance:
+    runs-on: ubuntu-latest
+    name: A job to update the instance
+    steps:
+      - name: Update instance
+        id: updaing-instance
+        uses: decent-infra/shomix-car-update-action@v1.0
+        with:
+          spheron-token:  ${{ secrets.SPHERON_TOKEN }}
+          instance-id: "6468b83802397f001249bf20"
+          tag: "v1.0.4"
+          env: "VAR1=value5,VAR2=value22"
+      # Use the output from the `hello` step
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
